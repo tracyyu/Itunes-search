@@ -11,5 +11,6 @@ Server-side:
 * Express 
 * Itunes API
 
-
 Both deployed to two separate AWS EC2 Instances.
+Application runs on: http://3.84.145.74:3001/
+Server runs on: http://52.90.70.201:/3000/
