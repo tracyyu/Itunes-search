@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const server = express();
-const PORT = 3002;
+const PORT = 3001;
 
 const router = express.Router();
 
