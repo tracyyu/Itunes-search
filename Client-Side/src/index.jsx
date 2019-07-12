@@ -43,7 +43,7 @@ class ItunesSearch extends React.Component {
 
   fetchSearchResults(term) {
     axios
-      .get(`52.90.70.201:3000/itunes-search?term=${term}`)
+      .get(`http://52.90.70.201:3000/itunes-search?term=${term}`)
       .then(({data}) => {
         this.setState({ results: data, isSearching: true })
       });
