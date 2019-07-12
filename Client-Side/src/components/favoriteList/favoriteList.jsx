@@ -12,7 +12,6 @@ class FavoriteList extends Component {
     }
 
     render() {
-        console.log(this.props.favorites);
         // Empty State or Result State
         let keys = Object.keys(this.props.favorites);
         // check result count
