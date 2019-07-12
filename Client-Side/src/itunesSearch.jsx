@@ -54,11 +54,8 @@ class ItunesSearch extends React.Component {
 
   saveFavorites(kind, obj) {
     var currentFavorites = JSON.parse(JSON.stringify(this.state.favorites));
-    console.log(currentFavorites);
     currentFavorites[kind] = currentFavorites[kind].push(obj);
-    console.log(currentFavorites);
     this.setState({ favorites: currentFavorites }, () => { 
-        console.log(this.state.favorites);
       localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
     });
   }
