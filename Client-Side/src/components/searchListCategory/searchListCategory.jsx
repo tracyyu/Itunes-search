@@ -15,4 +15,9 @@ const SearchListCategory = (props) => (
     </div>
 );
 
+SearchListCategory.propTypes = {
+    result: PropTypes.array.isRequired
+};
+
+
 export default SearchListCategory;

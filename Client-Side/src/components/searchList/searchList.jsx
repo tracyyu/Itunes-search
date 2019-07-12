@@ -35,6 +35,11 @@ class SearchList extends Component {
     }
 };
 
+SearchList.propTypes = {
+    results: PropTypes.object.isRequired
+};
+
+
 
 export default SearchList;
 

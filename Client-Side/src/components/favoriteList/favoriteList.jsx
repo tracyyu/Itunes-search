@@ -33,5 +33,9 @@ class FavoriteList extends Component {
     }
 };
 
+FavoriteList.propTypes = {
+    favorites: PropTypes.object.isRequired
+};
+
 
 export default FavoriteList;
