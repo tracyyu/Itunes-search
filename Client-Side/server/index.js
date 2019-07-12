@@ -12,7 +12,11 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use('/', express.static(path.join(__dirname, '../public/')))
 
 server.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "ec2-52-90-70-201.compute-1.amazonaws.com:3000");
+  var allowedOrigins = ['http://52.90.70.201:3000', 'http://localhost:3000'];
+  var origin = req.headers.origin;
+  if(allowedOrigins.indexOf(origin) > -1){
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.header('Access-Control-Allow-Methods', 'GET');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
