@@ -30,7 +30,7 @@ class SearchListCategoryEntry extends Component {
         <p>Genre: {this.props.data['genre']}</p>
         <div className={styles.links}>
           <em><a href={this.props.data['url']}>Link</a></em>
-          <span className={styles.favorite} onClick={this.toggleFavorite}>
+          <span className={styles.favorite} onClick={this.toggleFavorite} >
             <i class={this.state.favorite ?  "fas fa-heart" : "far fa-heart"}></i>
           </span>
         </div>

@@ -54,15 +54,32 @@ class ItunesSearch extends React.Component {
 
   saveFavorites(kind, obj) {
     var currentFavorites = JSON.parse(JSON.stringify(this.state.favorites));
-    currentFavorites[kind] = currentFavorites.hasOwnProperty(kind) ? currentFavorites[kind].push(obj) : [obj];
+    console.log(currentFavorites);
+    currentFavorites[kind] = currentFavorites[kind].push(obj);
+    console.log(currentFavorites);
     this.setState({ favorites: currentFavorites }, () => { 
+        console.log(this.state.favorites);
       localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
     });
   }
 
   retrieveSavedFavorites() {
     var retrievedData = localStorage.getItem("favorites");
-    var userFavorites = JSON.parse(retrievedData) || {};
+    var userFavorites = JSON.parse(retrievedData) || 
+    {
+        'book': [],
+        'album': [],
+        'coached-audio': [],
+        'feature-movie': [],
+        'interactive-booklet': [],
+        'music-video': [],
+        'pdf podcast': [],
+        'software-package': [],
+        'song': [],
+        'tv-episode': [],
+        'artist': [],
+        'podcast': []
+      };
     this.setState({
       favorites: userFavorites
     });
@@ -76,7 +93,7 @@ class ItunesSearch extends React.Component {
           !Object.keys(this.state.results).length && <HomePage />
         }
         <SearchList results={this.state.results} term={this.state.term} isSearching={this.state.isSearching} saveFavorites={this.saveFavorites} />
-        { Object.keys(this.state.favorites).length && <FavoriteList favorites={this.state.favorites} /> }
+        <FavoriteList favorites={this.state.favorites} />
       </div>
     );
   }

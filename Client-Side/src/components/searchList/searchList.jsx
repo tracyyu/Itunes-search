@@ -27,7 +27,13 @@ class SearchList extends Component {
         { keys.length > 0 && <p>You've searched <span><em>{this.props.term}</em></span></p> }
         {
           resultCt ?  keys.map( (category) => {
-            return this.props.results[category].length > 0 ? <SearchListCategory key={category} category={category} result={this.props.results[category]} saveFavorites={this.props.saveFavorites}/> : ''
+            return this.props.results[category].length > 0 ? 
+              <SearchListCategory 
+                key={category} 
+                category={category} 
+                result={this.props.results[category]} 
+                saveFavorites={this.props.saveFavorites}
+              /> : ''
           }) : ( this.props.isSearching ? <NoResults /> : '')
         }
       </div>

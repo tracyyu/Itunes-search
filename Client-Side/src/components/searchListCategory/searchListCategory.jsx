@@ -9,7 +9,12 @@ const SearchListCategory = (props) => (
     <ul className={[styles.categoryList, styles[props.category]].join(' ')}>
     {
       props.result.map( (data) => {
-        return <SearchListCategoryEntry data={data} category={props.category} saveFavorites={props.saveFavorites} />
+        return (
+          <SearchListCategoryEntry 
+            data={data} 
+            category={props.category} 
+            saveFavorites={props.saveFavorites} 
+          />)
       })
     }
     </ul>

@@ -25,7 +25,13 @@ class FavoriteList extends Component {
         <h1>Favorited List:</h1>
         {
           resultCt ?  keys.map( (category) => {
-            return this.props.favorites[category].length > 0 ? <SearchListCategory key={category} category={category} result={this.props.favorites[category]} saveFavorites={this.props.saveFavorites}/> : ''
+            return this.props.favorites[category].length > 0 ? 
+              <SearchListCategory 
+                key={category} 
+                category={category} 
+                result={this.props.favorites[category]} 
+                saveFavorites={this.props.saveFavorites} 
+              /> : ''
           }) : ( this.props.isSearching ? <NoResults /> : '')
         }
       </div>
