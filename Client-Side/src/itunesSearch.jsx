@@ -54,32 +54,21 @@ class ItunesSearch extends React.Component {
 
   saveFavorites(kind, obj) {
     var currentFavorites = JSON.parse(JSON.stringify(this.state.favorites));
-    currentFavorites[kind] = currentFavorites[kind].push(obj);
+    currentFavorites[kind].push(obj);
     this.setState({ favorites: currentFavorites }, () => { 
+      console.log(this.state.favorites);
       localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
     });
   }
 
-  retrieveSavedFavorites() {
+   retrieveSavedFavorites() {
     var retrievedData = localStorage.getItem("favorites");
-    var userFavorites = JSON.parse(retrievedData) || 
-    {
-        'book': [],
-        'album': [],
-        'coached-audio': [],
-        'feature-movie': [],
-        'interactive-booklet': [],
-        'music-video': [],
-        'pdf podcast': [],
-        'software-package': [],
-        'song': [],
-        'tv-episode': [],
-        'artist': [],
-        'podcast': []
-      };
-    this.setState({
-      favorites: userFavorites
-    });
+    if(retrievedData) {
+        var userFavorites = JSON.parse(retrievedData);
+        this.setState({
+            favorites: userFavorites
+        });
+    }
   }
   
   render() {
