@@ -15,7 +15,7 @@ server.use(function(req, res, next) {
   var allowedOrigins = ['http://52.90.70.201:3000', 'http://localhost:3000'];
   var origin = req.headers.origin;
   if(allowedOrigins.indexOf(origin) > -1){
-       res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Origin', origin);
   }
   res.header('Access-Control-Allow-Methods', 'GET');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

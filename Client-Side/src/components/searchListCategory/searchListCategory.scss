@@ -13,84 +13,84 @@ $tv-episode: #6a828b;
 $artist: #566767;
 
 .book {
-    background-color: $book; 
-    border: 1px solid $book;
+  background-color: $book; 
+  border: 1px solid $book;
 }
 
 .album {
-    background-color: $album; 
-    border: 1px solid $album;
+  background-color: $album; 
+  border: 1px solid $album;
 }
 
 .coached-audio {
-    background-color: $coached-audio; 
-    border: 1px solid $coached-audio;
+  background-color: $coached-audio; 
+  border: 1px solid $coached-audio;
 }
 
 .feature-movie {
-    background-color: $feature-movie; 
-    border: 1px solid $feature-movie;
+  background-color: $feature-movie; 
+  border: 1px solid $feature-movie;
 }
 
 .interactive-booklet {
-    background-color: $interactive-booklet; 
-    border: 1px solid $interactive-booklet;
+  background-color: $interactive-booklet; 
+  border: 1px solid $interactive-booklet;
 }
 
 .music-video {
-    background-color: $music-video; 
-    border: 1px solid $music-video;
+  background-color: $music-video; 
+  border: 1px solid $music-video;
 }
 
 .pdf-podcast {
-    background-color: $pdf-podcast; 
-    border: 1px solid $pdf-podcast;
+  background-color: $pdf-podcast; 
+  border: 1px solid $pdf-podcast;
 }
 
 .podcast-episode {
-    background-color: $podcast-episode; 
-    border: 1px solid $podcast-episode;
+  background-color: $podcast-episode; 
+  border: 1px solid $podcast-episode;
 }
 
 .software-package {
-    background-color: $software-package; 
-    border: 1px solid $software-package;
+  background-color: $software-package; 
+  border: 1px solid $software-package;
 }
 
 .song {
-    background-color: $song;
-    border: 1px solid $song;
+  background-color: $song;
+  border: 1px solid $song;
 }
 
 .tv-episode {
-    background-color: $tv-episode; 
-    border: 1px solid $tv-episode;
+  background-color: $tv-episode; 
+  border: 1px solid $tv-episode;
 }
 
 .artist {
-    background-color: $artist; 
-    border: 1px solid $artist;
+  background-color: $artist; 
+  border: 1px solid $artist;
 }
 
 .category {
-    padding: 20px;
-    margin: 40px 20px 0px 20px;
-    min-height: 300px;
+  padding: 20px;
+  margin: 40px 20px 0px 20px;
+  min-height: 300px;
 
-    .categoryHeader {
-        text-transform: uppercase;
-        margin-bottom: 10px; 
-    }
+  .categoryHeader {
+    text-transform: uppercase;
+    margin-bottom: 10px; 
+  }
 
-    .categoryList {
-        -webkit-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
-        -moz-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
-        box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
-        border-radius: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+  .categoryList {
+    -webkit-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+    box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }

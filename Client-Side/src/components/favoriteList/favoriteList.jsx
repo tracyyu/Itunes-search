@@ -7,30 +7,30 @@ import SearchListCategory from '../searchListCategory/searchListCategory.jsx';
 
 class FavoriteList extends Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    // Empty State or Result State
+    let keys = Object.keys(this.props.favorites);
+    // check result count
+    var resultCt = 0;
+    for( let i of keys ) {
+      resultCt += this.props.favorites[i].length;
     }
 
-    render() {
-        // Empty State or Result State
-        let keys = Object.keys(this.props.favorites);
-        // check result count
-        var resultCt = 0;
-        for( let i of keys ) {
-            resultCt += this.props.favorites[i].length;
+    return (
+      <div className={faveStyles.favoriteListMain}>
+        <h1>Favorited List:</h1>
+        {
+          resultCt ?  keys.map( (category) => {
+            return this.props.favorites[category].length > 0 ? <SearchListCategory key={category} category={category} result={this.props.favorites[category]} saveFavorites={this.props.saveFavorites}/> : ''
+          }) : ( this.props.isSearching ? <NoResults /> : '')
         }
-
-        return (
-            <div className={faveStyles.favoriteListMain}>
-                <h1>Favorited List:</h1>
-                {
-                    resultCt ?  keys.map( (category) => {
-                        return this.props.favorites[category].length > 0 ? <SearchListCategory key={category} category={category} result={this.props.favorites[category]} saveFavorites={this.props.saveFavorites}/> : ''
-                    }) : ( this.props.isSearching ? <NoResults /> : '')
-                }
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 };
 
 FavoriteList.propTypes = {

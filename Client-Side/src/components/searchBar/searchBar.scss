@@ -1,57 +1,57 @@
 .search {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,0%);
-    transition: all 0.3s ease-out;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  transition: all 0.3s ease-out;
 
-    .searchForm {
-        background-color: none;
-        height: 50px;
-        border-radius: 40px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .searchForm {
+    background-color: none;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        .searchKeyword {
-            background: none;
-            outline: none;
-            border: none;
-            border-bottom: 3px solid grey;
-            float: left;
-            padding: 0 0 0 10px;
-            color: white;
-            font-size: 18px;
-            transition: 0.4s;
-            line-height: 60px;
-            width: 240px;
-        }
-
-        .searchKeyword:focus {
-            border-bottom: 3px solid white;
-        }
-        
-        .searchButton {
-            background-color: transparent;
-            width: 50px;
-            height: 50px;
-            border-radius: 40px;
-            border: 0;
-            color: white;
-            float: right;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .searchKeyword {
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 3px solid grey;
+      float: left;
+      padding: 0 0 0 10px;
+      color: white;
+      font-size: 18px;
+      transition: 0.4s;
+      line-height: 60px;
+      width: 240px;
     }
+
+    .searchKeyword:focus {
+      border-bottom: 3px solid white;
+    }
+    
+    .searchButton {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      border-radius: 40px;
+      border: 0;
+      color: white;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .animateUp {
-    animation: up 0.6s ease-out forwards;
+  animation: up 0.6s ease-out forwards;
 }
 
 @keyframes up {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-300px);   }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-300px);   }
 }
