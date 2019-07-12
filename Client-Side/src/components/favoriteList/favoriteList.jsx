@@ -31,6 +31,8 @@ class FavoriteList extends Component {
                 category={category} 
                 result={this.props.favorites[category]} 
                 saveFavorites={this.props.saveFavorites} 
+                removeSavedFavorites={this.props.removeSavedFavorites}
+                isFavorite={true}
               /> : ''
           }) : ( this.props.isSearching ? <NoResults /> : '')
         }

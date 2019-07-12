@@ -14,6 +14,8 @@ const SearchListCategory = (props) => (
             data={data} 
             category={props.category} 
             saveFavorites={props.saveFavorites} 
+            removeSavedFavorites={props.removeSavedFavorites}
+            isFavorite={props.isFavorite}
           />)
       })
     }

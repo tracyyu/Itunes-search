@@ -12,10 +12,18 @@ class SearchListCategoryEntry extends Component {
     this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({
+      favorite: this.props.isFavorite
+    })
+  }
+
   toggleFavorite() {
     this.setState({ favorite: !this.state.favorite }, () => {
       if(this.state.favorite) {
         this.props.saveFavorites(this.props.category, this.props.data);
+      } else {
+        this.props.removeSavedFavorites(this.props.category, this.props.data);
       }
     });
   }
@@ -31,7 +39,7 @@ class SearchListCategoryEntry extends Component {
         <div className={styles.links}>
           <em><a href={this.props.data['url']}>Link</a></em>
           <span className={styles.favorite} onClick={this.toggleFavorite} >
-            <i class={this.state.favorite ?  "fas fa-heart" : "far fa-heart"}></i>
+            <i class={ (this.state.favorite || this.props.isFavorite) ?  "fas fa-heart" : "far fa-heart"}></i>
           </span>
         </div>
       </li>

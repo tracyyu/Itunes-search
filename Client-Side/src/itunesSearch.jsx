@@ -34,6 +34,7 @@ class ItunesSearch extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.saveFavorites = this.saveFavorites.bind(this);
     this.retrieveSavedFavorites = this.retrieveSavedFavorites.bind(this);
+    this.removeSavedFavorites = this.removeSavedFavorites.bind(this);
   }
 
   componentDidMount() {
@@ -56,7 +57,6 @@ class ItunesSearch extends React.Component {
     var currentFavorites = JSON.parse(JSON.stringify(this.state.favorites));
     currentFavorites[kind].push(obj);
     this.setState({ favorites: currentFavorites }, () => { 
-      console.log(this.state.favorites);
       localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
     });
   }
@@ -70,6 +70,20 @@ class ItunesSearch extends React.Component {
         });
     }
   }
+
+  removeSavedFavorites(kind, obj) {
+    var currentFavorites = JSON.parse(JSON.stringify(this.state.favorites));
+    var kindArr = currentFavorites[kind];
+    for (var i=0; i < kindArr.length; i++) {
+        if (kindArr[i].id === obj.id) {
+            kindArr.splice(i,1);
+        }
+    }
+    currentFavorites[kind] = kindArr;
+    this.setState({ favorites: currentFavorites }, () => { 
+      localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
+    });
+  }
   
   render() {
     return(
@@ -78,8 +92,8 @@ class ItunesSearch extends React.Component {
         {
           !Object.keys(this.state.results).length && <HomePage />
         }
-        <SearchList results={this.state.results} term={this.state.term} isSearching={this.state.isSearching} saveFavorites={this.saveFavorites} />
-        <FavoriteList favorites={this.state.favorites} />
+        <SearchList results={this.state.results} term={this.state.term} isSearching={this.state.isSearching} saveFavorites={this.saveFavorites} removeSavedFavorites={this.removeSavedFavorites}/>
+        <FavoriteList favorites={this.state.favorites} saveFavorites={this.saveFavorites} removeSavedFavorites={this.removeSavedFavorites}/>
       </div>
     );
   }
