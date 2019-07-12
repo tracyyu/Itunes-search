@@ -1,0 +1,40 @@
+// Configuration parameters
+// Define width of individual slide (% or px)
+$slide-width: 40%;
+
+// Define gap between the slides
+$slide-separation: 40px;
+
+$distance: 1000px;
+
+.carousel{
+  perspective: $distance;
+  position: relative;
+  opacity: 0.75;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: hidden;
+  margin: 15px 0 30px 0;
+
+  .scene{
+    width: $slide-width;
+    margin: 40px auto 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+
+    .carouselItem{
+      width: 100%;
+      -webkit-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+      -moz-box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+      box-shadow: -12px 8px 33px -8px rgba(0,0,0,0.75);
+      padding: 0 ($slide-separation / 2) 0 ($slide-separation / 4);
+      backface-visibility: hidden;
+      &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.categoryEntry {
+    width: 130px;
+    display: inline-block;
+    margin: 20px;
+
+    a, a:visited {
+        margin: auto;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 12px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .imgUrl {
+        margin: auto;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+
+        .favorite {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+    
+    i.fas .fa-heart {
+        color: red;
+    }
+}

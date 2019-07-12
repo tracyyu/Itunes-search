@@ -1,0 +1,10 @@
+@import 'colors';
+@import 'app';
+
+.pageLayout {
+    background-image: linear-gradient(180deg, #000000 0%, #2c3e50 175%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
