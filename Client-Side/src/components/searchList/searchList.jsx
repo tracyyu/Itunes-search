@@ -15,6 +15,7 @@ class SearchList extends Component {
     render() {
         // Empty State or Result State
         let keys = Object.keys(this.props.results);
+
         // check result count
         var resultCt = 0;
         for( let i of keys ) {
