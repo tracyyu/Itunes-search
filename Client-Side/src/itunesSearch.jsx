@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import SearchBar from './components/searchBar/searchBar.jsx';
 import SearchList from './components/searchList/searchList.jsx';
