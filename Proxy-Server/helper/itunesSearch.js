@@ -41,9 +41,9 @@ const getKindType = (str) => {
 }
 
 
-const getResultByTerm = (media, term, callback) => {
+const getResultByTerm = (term, callback) => {
   let options = {
-    url: `https://itunes.apple.com/search?media=all&term=${query.split(' ').join('+')}`,
+    url: `https://itunes.apple.com/search?media=all&term=${term.split(' ').join('+')}`,
     headers: {
       'User-Agent': 'request',
     }
