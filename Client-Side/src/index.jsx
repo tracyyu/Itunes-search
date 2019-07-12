@@ -63,7 +63,7 @@ class ItunesSearch extends React.Component {
 
   retrieveSavedFavorites() {
     var retrievedData = localStorage.getItem("favorites");
-    var userFavorites = JSON.parse(retrievedData);
+    var userFavorites = JSON.parse(retrievedData) || {};
     this.setState({
       favorites: userFavorites
     });
@@ -77,7 +77,7 @@ class ItunesSearch extends React.Component {
           !Object.keys(this.state.results).length && <HomePage />
         }
         <SearchList results={this.state.results} term={this.state.term} isSearching={this.state.isSearching} saveFavorites={this.saveFavorites} />
-        <FavoriteList favorites={this.state.favorites} />
+        { Object.keys(this.state.favorites).length && <FavoriteList favorites={this.state.favorites} /> }
       </div>
     );
   }
