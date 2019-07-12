@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './searchList.scss';
 
 import LoadingProducts from "../loader/loadingSearch.jsx";
-import NoResults from "../emptystate/noResults.jsx";
+import NoResults from "../emptyState/noResults.jsx";
 import SearchListCategory from '../searchListCategory/searchListCategory.jsx';
 
 class SearchList extends Component {
