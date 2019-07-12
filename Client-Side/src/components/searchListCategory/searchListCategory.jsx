@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styles from './searchListCategory.scss';
 import SearchListCategoryEntry from '../searchListCategoryEntry/searchListCategoryEntry.jsx';
 
