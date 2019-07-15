@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import SearchBar from './components/searchBar/searchBar.jsx';
-import SearchList from './components/searchList/searchList.jsx';
+import SearchBar from './components/searchBar/SearchBar.jsx';
+import SearchList from './components/searchList/SearchList.jsx';
 import styles from './scss/index.scss';
-import HomePage from './components/homepage/homePage.jsx';
-import FavoriteList from './components/favoriteList/favoriteList.jsx';
+import HomePage from './components/homepage/HomePage.jsx';
+import FavoriteList from './components/favoriteList/FavoriteList.jsx';
 
 
 class ItunesSearch extends React.Component {

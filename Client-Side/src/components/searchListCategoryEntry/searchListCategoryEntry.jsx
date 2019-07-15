@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from './searchListCategoryEntry.scss';
+import styles from './SearchListCategoryEntry.scss';
 
 class SearchListCategoryEntry extends Component {
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from '../searchList/searchList.scss';
-import faveStyles from './favoriteList.scss';
+import styles from '../searchList/SearchList.scss';
+import faveStyles from './FavoriteList.scss';
 
-import SearchListCategory from '../searchListCategory/searchListCategory.jsx';
+import SearchListCategory from '../searchListCategory/SearchListCategory.jsx';
 
 class FavoriteList extends Component {
 

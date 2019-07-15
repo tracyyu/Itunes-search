@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './searchList.scss';
+import styles from './SearchList.scss';
 
-import LoadingProducts from "../loader/loadingSearch.jsx";
-import NoResults from "../emptyState/noResults.jsx";
-import SearchListCategory from '../searchListCategory/searchListCategory.jsx';
+import LoadingProducts from "../loader/LoadingSearch.jsx";
+import NoResults from "../emptyState/NoResults.jsx";
+import SearchListCategory from '../searchListCategory/SearchListCategory.jsx';
 
 class SearchList extends Component {
 

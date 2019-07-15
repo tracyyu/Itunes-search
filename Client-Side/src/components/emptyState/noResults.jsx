@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './noResults.scss';
+import styles from './NoResults.scss';
 
 const NoResults = () => {
   return (

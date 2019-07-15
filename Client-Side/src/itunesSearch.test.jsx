@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import ItunesSearch from './itunesSearch.jsx';
+import ItunesSearch from './ItunesSearch';
 
 describe('testing App component', ()=> {
 

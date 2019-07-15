@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import styles from './searchListCategory.scss';
-import SearchListCategoryEntry from '../searchListCategoryEntry/searchListCategoryEntry.jsx';
+import styles from './SearchListCategory.scss';
+import SearchListCategoryEntry from '../searchListCategoryEntry/SearchListCategoryEntry.jsx';
 
 const SearchListCategory = (props) => (
   <div className={styles.category}>
