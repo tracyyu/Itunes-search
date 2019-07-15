@@ -12,7 +12,11 @@ module.exports = {
         options: {
           presets: [
             "@babel/env",
-            "@babel/react"]
+            "@babel/react"],
+          "plugins": [
+            "@babel/plugin-syntax-dynamic-import",
+            "@babel/plugin-proposal-class-properties"
+          ]
         },
       },
 

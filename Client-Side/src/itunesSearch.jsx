@@ -88,10 +88,10 @@ class ItunesSearch extends React.Component {
   render() {
     return(
       <div className={styles.pageLayout}>
-        <SearchBar fetchSearchResults={this.fetchSearchResults} handleSearch={this.handleSearch} term={this.state.term} />
         {
           !Object.keys(this.state.results).length && <HomePage />
         }
+        <SearchBar fetchSearchResults={this.fetchSearchResults} handleSearch={this.handleSearch} term={this.state.term} />
         <SearchList results={this.state.results} term={this.state.term} isSearching={this.state.isSearching} saveFavorites={this.saveFavorites} removeSavedFavorites={this.removeSavedFavorites}/>
         <FavoriteList favorites={this.state.favorites} saveFavorites={this.saveFavorites} removeSavedFavorites={this.removeSavedFavorites}/>
       </div>

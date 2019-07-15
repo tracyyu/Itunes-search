@@ -1,9 +1,7 @@
 .search {
-  position: absolute;
-  top: 55%;
-  left: 50%;
+  margin: auto;
   min-width: 500px;
-  transform: translate(-50%,0%);
+  transform: translate(0%,15%);
   transition: all 0.3s ease-out;
 
   .searchForm {
