@@ -90,7 +90,30 @@ $artist: #566767;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
   }
+
+  .listSubtitle {
+    width: 100%;
+    text-align: right;
+    padding: 10px 20px 0 0;
+    margin: 0px;
+    display: block;
+    line-height: 15px;
+
+    button {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #ffffff;
+        line-height: 100%;
+        padding-bottom: 2px;
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        background: none;
+        font-weight: 900;
+        text-decoration: none;
+    }
+}
 }

@@ -1,10 +1,10 @@
 .categoryEntry {
-  width: 180px;
+  width: 200px;
   display: inline-block;
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px 0px; 
-  margin: 20px;
+  margin: 20px 10px;
 
   a, a:visited {
     margin: auto;
@@ -16,10 +16,12 @@
 
   p {
     font-size: 12px;
-    white-space: wrap; 
-    overflow: hidden;
+    line-height: 12px;
+    height: 36px;
     text-overflow: ellipsis;
     text-align: center;
+    white-space: wrap; 
+    overflow: hidden;
   }
 
   .imgUrl {

@@ -1,0 +1,76 @@
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .buttonWrapper {
+        position: relative;
+        flex: 0 0 25px;
+
+        button {
+            text-indent: -99999px;
+            overflow: hidden;
+            display: block;
+            transition: border-color 0.4s;
+            position: absolute;
+            top: -25px;
+            outline: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .buttonBack {
+            width: 24px;
+            height: 24px;
+            border-top: 4px solid #ffffff;
+            border-right: 4px solid #ffffff;
+            border-left: 0;
+            border-bottom: 0;
+            opacity: 1;
+            -webkit-transform: rotate(225deg);
+            -moz-transform: rotate(225deg);
+            -ms-transform: rotate(225deg);
+            -o-transform: rotate(225deg);
+            transform: rotate(225deg);
+            left: 15px;
+        }
+
+        .buttonForward {
+            width: 24px;
+            height: 24px;
+            border-top: 4px solid #ffffff;
+            border-right: 4px solid #ffffff;
+            border-left: 0;
+            border-bottom: 0;
+            opacity: 1;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: 15px;
+        }
+
+        .buttonBack:disabled, .buttonForward:disabled{ 
+            opacity: 0.4;
+        }
+    }
+
+    .carouselViewport {
+        margin: 0 15px;
+        overflow: hidden;
+        flex: 1 1 auto;
+
+        .carouselItems {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            display: flex;
+            flex-wrap: nowrap;
+            will-change: transform;
+            transition: transform 0.3s ease-out;
+        }
+    }
+}

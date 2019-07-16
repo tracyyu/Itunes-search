@@ -26,7 +26,7 @@ class HomePage extends Component {
     setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
     window.addEventListener('resize', function() {
       clearInterval(interval);
-      setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
+      setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0], '').width));
     }, false);
 
     function setupCarousel(n, width) {

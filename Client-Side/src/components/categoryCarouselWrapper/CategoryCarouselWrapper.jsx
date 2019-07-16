@@ -1,33 +1,27 @@
 import React from 'react';
-import categoryCarousel from '../categoryCarousel/CategoryCarousel';
-import style from './RelatedProductCarouselWrapper.scss';
-import axios from 'axios';
+import CategoryCarousel from '../categoryCarousel/CategoryCarousel.jsx';
+import styles from './CategoryCarouselWrapper.scss';
 
-class categoryCarouselWrapper extends React.Component {
-    constructor(props) {
-        super(props);
+const CategoryCarouselWrapper = (props) => {
+  return (
+    <div className={styles.categoryCarouselWrapper}>
+      {   props.searchResults.length >= 5 && props.toggleViewAll &&
+        <h3 className={styles.carouselSubtitle}>
+          <button onClick={props.toggleViewAll}>View All</button>
+        </h3>
+      }
+      <div className={styles.categoryCarouselWrapperWithTitle}>
+        <CategoryCarousel 
+          searchResults={props.searchResults} 
+          key={props.category}
+          category={props.category} 
+          saveFavorites={props.saveFavorites} 
+          removeSavedFavorites={props.removeSavedFavorites}
+          isFavorite={props.isFavorite}
+        />
+      </div>
+    </div>
+  );
+};
 
-        this.state = {
-            searchResults : []
-        }
-
-        this.fetchDataByID = this.fetchDataByID.bind(this);
-    }
-
-    render() {
-        return (
-            <div className={style.categoryCarouselWrapper}>
-                <div className={style.categoryCarouselWrapperWithTitle}>
-                    <div className={style.categoryCarouselWrapperWithTitle}>
-                        <p className={style.carouselSubtitle}>
-                            <a href="">View All</a>
-                        </p>
-                        <CategoryCarousel searchResults={this.state.searchResults} key={this.state.searchResults.length}/>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
-export default categoryCarouselWrapper;
+export default CategoryCarouselWrapper;

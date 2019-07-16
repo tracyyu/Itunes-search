@@ -1,55 +1,39 @@
-@font-face {
-    font-family: 'EngraversGothic BT';
-    src: url('../../dist/Engravers_Gothic_Regular.otf');
-}
-
-@font-face {
-    font-family: 'Proxima Nova Regular';
-    src: url('../../dist/Proxima_Nova_Reg.ttf');
-}
-
 .categoryCarouselWrapper {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     letter-spacing: 0;
     font-size: 15px;
     font-weight: 300;
-    padding: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1300px;
-    min-width: 960px;
-}
 
-.categoryCarouselWrapperWithTitle {
-    margin: 0 auto 40px;
+    .categoryCarouselWrapperWithTitle {
 
-    .carouselHeader {
-        font-size: 20px;
-        line-height: 26px;
-        letter-spacing: 0;
-        text-transform: none;
-        font-family: 'Times New Roman', Times, serif;
+        .carouselHeader {
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 0;
+            text-transform: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
     }
 
     .carouselSubtitle {
         text-align: right;
-        margin: -26px 50px 0 0;
+        padding: 10px 20px 0 0;
+        margin: 0px;
         display: block;
         line-height: 15px;
-        margin: -40px auto 40px;
-        padding-top: 4px;
 
-        a {
-            font-family: EngraversGothic BT, serif;
+        button {
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #333333;
+            color: #ffffff;
             line-height: 100%;
             padding-bottom: 2px;
-            border-bottom: 1px solid #333333;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            background: none;
+            font-weight: 900;
             text-decoration: none;
         }
     }
