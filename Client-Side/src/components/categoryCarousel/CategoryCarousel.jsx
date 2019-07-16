@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CategoryCarousel.scss';
-import SearchListCategoryEntry from '../searchListCategoryEntry/searchListCategoryEntry.jsx';
+import SearchListCategoryEntry from '../searchListCategoryEntry/SearchListCategoryEntry.jsx';
 
 class CategoryCarousel extends React.Component {
     constructor(props) {
